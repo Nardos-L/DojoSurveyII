@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model Survey
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="form-container">
+        <form action="/survey" method="post">
+            <label for="Name">Your Name</label>
+            <input type="text" id="Name" name="Name" placeholder="Your name..">
+
+            <label for="Location">Dojo Location</label>
+            <select name="Location" id="Location" >
+                <option value="Seattle">Seattle</option>
+                <option value="San Jose">San Jose</option>
+                <option value="DC">DC</option>
+                <option value="California">California</option>
+            </select>
+            <label for="Language">Favorite Language</label>
+            <select name="Language" id="Language" >
+                <option value="C#">C#</option>
+                <option value="Python">Python</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Java">Java</option>
+            </select>
+            <label for="Comment">Comment(optional)</label>
+
+            <textarea id="Comment" name="Comment" placeholder="Write something.." style="height:200px"></textarea>
+
+            <input type="submit" value="Send">
+        </form>
+    </div>
+
+</body>
+</html>
